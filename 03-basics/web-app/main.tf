@@ -44,7 +44,7 @@ resource "aws_instance" "instance_2" {
 }
 
 resource "aws_s3_bucket" "bucket" {
-  bucket_prefix = "devops-directive-web-app-data"
+  bucket_prefix = "devops-directive-web-app-data-jagdeep"
   force_destroy = true
 }
 
@@ -187,7 +187,7 @@ resource "aws_lb" "load_balancer" {
 }
 
 resource "aws_route53_zone" "primary" {
-  name = "devopsdeployed.com"
+  name = "devopsdeployed-jagdeep.com"
 }
 
 resource "aws_route53_record" "root" {
@@ -213,7 +213,7 @@ resource "aws_db_instance" "db_instance" {
   engine                     = "postgres"
   engine_version             = "12"
   instance_class             = "db.t2.micro"
-  name                       = "mydb"
+  name                       = "mydb_jagdeep"
   username                   = "foo"
   password                   = "foobarbaz"
   skip_final_snapshot        = true
